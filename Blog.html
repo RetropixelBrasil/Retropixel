@@ -177,44 +177,53 @@ async function atualizarRSSInfo() {
     let lastDate = null;
 
     items.forEach(d => {
+
       const date = new Date(d.textContent);
+
       if (!lastDate || date > lastDate) {
         lastDate = date;
       }
+
     });
 
     if (lastDate) {
+
       document.getElementById("lastUpdate").innerText =
         lastDate.toLocaleDateString("pt-BR");
+
     }
 
     /*
+    // 📡 CONTADOR DE "ASSINANTES" — DESATIVADO
 
-    // 📡 Contador de “assinantes” (simulado mas persistente)
     let count = localStorage.getItem("rssSubscribers");
 
     if (!count) {
-      count = 000; // base inicial estilo retro
+      count = 000;
     }
 
-    // simula crescimento leve e consistente
+    // Simula crescimento leve e consistente
     count = parseInt(count) + Math.floor(Math.random() * 2);
 
     localStorage.setItem("rssSubscribers", count);
 
     document.getElementById("rssCount").innerText = count;
+    */
 
   } catch (e) {
 
     document.getElementById("lastUpdate").innerText =
       "indisponível";
 
+    /*
+    // 📡 CONTADOR DE "ASSINANTES" — DESATIVADO
+
     document.getElementById("rssCount").innerText =
       "000";
-
-   */
+    */
 
   }
+
 }
 
 atualizarRSSInfo();
