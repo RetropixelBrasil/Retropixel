@@ -462,3 +462,36 @@ color:white;
     max-width: 100%;
   }
 }
+
+.aniversario-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  max-width: 650px;
+  margin: 35px auto;
+  padding: 10px;
+}
+
+.aniversario-imagem {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.aniversario-convite {
+  margin: 0;
+  text-align: left;
+}
+
+@media (max-width: 480px) {
+  .aniversario-container {
+    gap: 12px;
+  }
+
+  .aniversario-imagem {
+    width: 80px;
+    height: 80px;
+  }
+}
