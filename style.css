@@ -344,3 +344,121 @@ color:white;
   border: 2px solid #00aaff;
   display: inline-block;
 }
+
+/* =========================
+   ANIVERSÁRIO RETROPIXEL™
+   ESTILO WINDOWS 95
+========================= */
+
+.aniversario-convite {
+  margin: 35px auto;
+  padding: 20px 12px;
+  max-width: 560px;
+}
+
+.aniversario-convite p {
+  color: #333333;
+  font-family: "Courier New", monospace;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+
+/* Botão quadriculado animado */
+
+.botao-aniversario {
+  display: inline-block;
+  position: relative;
+  padding: 18px 42px;
+
+  font-family: "Courier New", monospace;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #000000;
+  text-decoration: none;
+
+  background-color: #ffb000;
+  background-image:
+    conic-gradient(
+      #ffcc00 25%,
+      #ff8c00 0% 50%,
+      #ffcc00 0% 75%,
+      #ff8c00 0
+    );
+  background-size: 24px 24px;
+
+  border: 3px solid;
+  border-color: #ffffff #404040 #404040 #ffffff;
+
+  box-shadow:
+    inset 1px 1px 0 #fff2b0,
+    3px 3px 0 #777777;
+
+  text-shadow: 1px 1px 0 #ffffff;
+
+  animation: aniversario-xadrez 1.2s linear infinite;
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+@keyframes aniversario-xadrez {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 24px 24px;
+  }
+}
+
+/* Efeito ao passar o mouse */
+
+.botao-aniversario:hover {
+  color: #000000;
+  box-shadow:
+    inset 1px 1px 0 #fff2b0,
+    5px 5px 0 #777777;
+
+  transform: translate(-1px, -1px);
+}
+
+/* Efeito ao clicar */
+
+.botao-aniversario:active {
+  border-color: #404040 #ffffff #ffffff #404040;
+
+  box-shadow:
+    inset 2px 2px 0 #9a5800;
+
+  transform: translate(2px, 2px);
+}
+
+/* Acessibilidade: respeita a preferência por menos animações */
+
+@media (prefers-reduced-motion: reduce) {
+  .botao-aniversario {
+    animation: none;
+  }
+}
+
+/* Adaptação para celulares */
+
+@media (max-width: 768px) {
+  .aniversario-convite {
+    padding: 15px 10px;
+  }
+
+  .aniversario-convite p {
+    font-size: 16px;
+  }
+
+  .botao-aniversario {
+    padding: 16px 28px;
+    font-size: 19px;
+    max-width: 100%;
+  }
+}
