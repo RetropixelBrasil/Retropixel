@@ -495,3 +495,234 @@ color:white;
     height: 80px;
   }
 }
+
+
+/* ==============================
+   ANIVERSÁRIO DE 1 ANO
+   RETROPIXEL™
+============================== */
+
+.pagina-aniversario {
+  text-align: center;
+}
+
+.aniversario-heroi {
+  padding: 25px 10px;
+  margin: 15px auto;
+}
+
+.aniversario-etiqueta {
+  color: #555;
+  font-family: "Courier New", monospace;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.aniversario-logo {
+  display: block;
+  width: min(100%, 340px);
+  max-height: 260px;
+  object-fit: contain;
+  margin: 15px auto;
+}
+
+.aniversario-titulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px auto;
+}
+
+.numero-um {
+  color: #1689e8;
+  font-family: Arial, sans-serif;
+  font-size: clamp(110px, 22vw, 200px);
+  font-weight: 900;
+  line-height: 0.9;
+  text-shadow: 3px 3px 0 #9bd6ff, 5px 5px 0 #777;
+}
+
+.aniversario-titulo h2 {
+  color: #1689e8;
+  margin: 0 0 10px;
+}
+
+.aniversario-titulo p {
+  margin: 0;
+}
+
+.aniversario-data {
+  font-family: "Courier New", monospace;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.mensagem-aniversario,
+.jogo-aniversario,
+.agradecimento-aniversario {
+  margin: 30px auto;
+  padding: 10px;
+}
+
+.mensagem-aniversario h2,
+.jogo-aniversario h2,
+.agradecimento-aniversario h2 {
+  color: #1689e8;
+}
+
+.mensagem-conteudo {
+  min-height: 100px;
+  padding: 15px;
+  margin: 15px auto;
+  max-width: 700px;
+  text-align: left;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  background: #fff;
+  border: 2px inset #aaa;
+  color: #222;
+}
+
+.mensagem-conteudo:empty::before {
+  content: attr(data-placeholder);
+  color: #888;
+}
+
+.mensagem-conteudo:focus {
+  outline: 2px solid #1689e8;
+}
+
+.jogo-painel {
+  max-width: 550px;
+  margin: 20px auto;
+  padding: 12px;
+  text-align: left;
+  background: #dedede;
+  border: 3px solid;
+  border-color: #fff #777 #777 #fff;
+  box-shadow: 2px 2px 0 #aaa;
+}
+
+.jogo-informacoes {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 8px;
+  font-family: "Courier New", monospace;
+  font-weight: bold;
+}
+
+.area-jogo {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+  background: #fff;
+  border: 2px inset #aaa;
+  background-image:
+    linear-gradient(#eeeeee 1px, transparent 1px),
+    linear-gradient(90deg, #eeeeee 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+#mensagem-jogo {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 15px;
+  margin: 0;
+  text-align: center;
+  font-weight: bold;
+}
+
+#mensagem-jogo[hidden] {
+  display: none;
+}
+
+.alvo-pixel {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  cursor: pointer;
+  background: #ffcc00;
+  border: 3px solid;
+  border-color: #fff #555 #555 #fff;
+  box-shadow: 1px 1px 0 #888;
+}
+
+.alvo-pixel:hover {
+  filter: brightness(1.1);
+}
+
+.alvo-pixel:active {
+  border-color: #555 #fff #fff #555;
+}
+
+.alvo-pixel[hidden] {
+  display: none;
+}
+
+.jogo-controles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.jogo-controles button,
+.botao-voltar {
+  display: inline-block;
+  padding: 10px 16px;
+  font-family: "Courier New", monospace;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  background: #dedede;
+  border: 2px solid;
+  border-color: #fff #666 #666 #fff;
+}
+
+.jogo-controles button:active,
+.botao-voltar:active {
+  border-color: #666 #fff #fff #666;
+}
+
+.jogo-controles button:disabled {
+  color: #777;
+  cursor: default;
+}
+
+.jogo-instrucao {
+  margin-bottom: 0;
+  font-size: 13px;
+}
+
+.botao-voltar {
+  margin: 15px auto;
+  background: #b9e2ff;
+}
+
+@media (max-width: 480px) {
+  .aniversario-titulo {
+    gap: 12px;
+  }
+
+  .aniversario-titulo h2 {
+    font-size: 18px;
+  }
+
+  .aniversario-titulo p {
+    font-size: 14px;
+  }
+
+  .aniversario-data {
+    font-size: 11px;
+  }
+
+  .area-jogo {
+    height: 240px;
+  }
+}
