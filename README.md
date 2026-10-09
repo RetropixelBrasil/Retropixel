@@ -1,7 +1,7 @@
 # Retropixel™
 
 **"Se é retrô, é Retropixel™."**  
-Site oficial da empresa **Retropixel™**, criado por Guilherme Albuquerque — um tributo à era dourada da tecnologia com estilo, cor e nostalgia!
+Site oficial da empresa **Retropixel™**, criada por Guilherme Albuquerque — um tributo à era dourada da tecnologia com estilo, cor e nostalgia!
 
 ---
 
@@ -20,11 +20,13 @@ Retropixel™ é uma pequena empresa de tecnologia retrô-analógica que faz apl
 
 - `index.html` — Página inicial
 - `Sobre.html` — História e origem da Retropixel™
-- `Lojinha.html` — Escolha entre produtos físicos e digitais
+- `Loja.html` — Escolha entre produtos físicos e digitais
 - `Blog.html` — Blog com atualizações sobre os nossos produtos
 - `Contato.html` — Informações de contato e botão de e-mail
 - `Produtos-fisicos.html` — Disquetes, camisetas e adesivos
 - `Produtos-digitais.html` — Wallpapers, aplicativos e sites
+- `TOS.html` — Termos de Serviço
+- `Privacidade.html` — Informações sobre sua privacidade e o que coletamos
 
 ---
 
