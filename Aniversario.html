@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <link rel="icon" type="image/png" href="Assets/Retropixel_logo.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>1 Ano da Retropixel™!</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="logo-container">
+      <img src="Assets/Retropixel_logo.png"
+           alt="Logo da Retropixel"
+           class="logo">
+      <h1>Retropixel™</h1>
+    </div>
+
+    <p class="slogan">"Se é retrô, é Retropixel™."</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="Sobre.html">Sobre</a>
+    <a href="Lojas.html">Lojas</a>
+    <a href="Blog.html">Blog</a>
+    <a href="Contato.html">Contato</a>
+  </nav>
+
+  <main class="pagina-aniversario">
+
+    <section class="aniversario-heroi">
+      <p class="aniversario-etiqueta">★ UMA DATA ESPECIAL ★</p>
+
+      <img
+        src="Assets/Retropixel_1_ano.png"
+        alt="Retropixel — 1 ano"
+        class="aniversario-logo"
+      >
+
+      <div class="aniversario-titulo">
+        <span class="numero-um">1</span>
+        <div>
+          <h2>ANOS DE RETROPIXEL™!</h2>
+          <p>Uma jornada de criatividade, tecnologia e nostalgia.</p>
+        </div>
+      </div>
+
+      <p class="aniversario-data">
+        10 DE OUTUBRO DE 2025 — 10 DE OUTUBRO DE 2026
+      </p>
+    </section>
+
+    <hr>
+
+    <section class="mensagem-aniversario">
+      <h2>Uma mensagem especial</h2>
+
+      <!-- Escreva sua mensagem de aniversário aqui. -->
+
+      <div class="mensagem-conteudo" contenteditable="true"
+           role="textbox" aria-label="Mensagem de aniversário"
+           data-placeholder="Escreva sua mensagem aqui..."></div>
+    </section>
+
+    <hr>
+
+    <section class="jogo-aniversario">
+      <h2>🎮 Minijogo: Caça aos Pixels!</h2>
+
+      <p>
+        Vamos comemorar! Clique nos quadradinhos coloridos
+        para marcar pontos antes que o tempo acabe.
+      </p>
+
+      <div class="jogo-painel">
+        <div class="jogo-informacoes">
+          <span>Pontos: <strong id="pontuacao">0</strong></span>
+          <span>Tempo: <strong id="tempo">20</strong>s</span>
+        </div>
+
+        <div id="area-jogo" class="area-jogo">
+          <p id="mensagem-jogo">
+            Preparado para a diversão?
+          </p>
+          <button id="alvo-pixel"
+                  class="alvo-pixel"
+                  type="button"
+                  aria-label="Clique para marcar pontos"
+                  hidden></button>
+        </div>
+
+        <div class="jogo-controles">
+          <button id="iniciar-jogo" type="button">
+            ▶ INICIAR JOGO
+          </button>
+          <button id="reiniciar-jogo" type="button">
+            ↻ RECOMEÇAR
+          </button>
+        </div>
+
+        <p class="jogo-instrucao">
+          Dica: seja rápido! Cada clique vale 1 ponto.
+        </p>
+      </div>
+    </section>
+
+    <hr>
+
+    <section class="agradecimento-aniversario">
+      <h2>Obrigado por fazer parte desta história!</h2>
+      <p>
+        <strong>Retropixel™ · 2025–2026</strong>
+      </p>
+      <p>Que venham muitos outros pixels!</p>
+
+      <a href="index.html" class="botao-voltar">
+        ◀ VOLTAR AO SITE
+      </a>
+    </section>
+
+    <footer>
+      <a href="TOS.html">Termos de Serviço</a>
+      |
+      <a href="Privacidade.html">Privacidade</a>
+      |
+      <a href="Suporte/Retropixel.html">Ajuda</a>
+
+      <p>© Retropixel™, 2025-2026. Todos os direitos reservados.</p>
+    </footer>
+
+  </main>
+
+  <script>
+    const areaJogo = document.getElementById("area-jogo");
+    const alvo = document.getElementById("alvo-pixel");
+    const pontuacaoEl = document.getElementById("pontuacao");
+    const tempoEl = document.getElementById("tempo");
+    const mensagem = document.getElementById("mensagem-jogo");
+    const iniciar = document.getElementById("iniciar-jogo");
+    const reiniciar = document.getElementById("reiniciar-jogo");
+
+    let pontuacao = 0;
+    let tempo = 20;
+    let intervalo = null;
+    let jogando = false;
+
+    function moverAlvo() {
+      const maxX = areaJogo.clientWidth - alvo.offsetWidth;
+      const maxY = areaJogo.clientHeight - alvo.offsetHeight;
+
+      alvo.style.left = Math.max(0, Math.random() * maxX) + "px";
+      alvo.style.top = Math.max(0, Math.random() * maxY) + "px";
+
+      const cores = ["#ffcc00", "#ff8c00", "#00aaff", "#32cd32", "#ff4d6d", "#a66cff"];
+      alvo.style.backgroundColor =
+        cores[Math.floor(Math.random() * cores.length)];
+    }
+
+    function terminarJogo() {
+      clearInterval(intervalo);
+      intervalo = null;
+      jogando = false;
+      alvo.hidden = true;
+      iniciar.disabled = false;
+      mensagem.hidden = false;
+      mensagem.textContent =
+        "Fim de jogo! Você marcou " + pontuacao + " ponto(s)! 🎉";
+    }
+
+    function iniciarJogo() {
+      clearInterval(intervalo);
+
+      pontuacao = 0;
+      tempo = 20;
+      jogando = true;
+
+      pontuacaoEl.textContent = pontuacao;
+      tempoEl.textContent = tempo;
+
+      mensagem.hidden = true;
+      alvo.hidden = false;
+      iniciar.disabled = true;
+
+      moverAlvo();
+
+      intervalo = setInterval(() => {
+        tempo--;
+        tempoEl.textContent = tempo;
+
+        if (tempo <= 0) {
+          terminarJogo();
+        }
+      }, 1000);
+    }
+
+    alvo.addEventListener("click", () => {
+      if (!jogando) return;
+
+      pontuacao++;
+      pontuacaoEl.textContent = pontuacao;
+      moverAlvo();
+    });
+
+    iniciar.addEventListener("click", iniciarJogo);
+    reiniciar.addEventListener("click", iniciarJogo);
+  </script>
+
+</body>
+</html>
