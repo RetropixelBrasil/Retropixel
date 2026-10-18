@@ -726,3 +726,205 @@ color:white;
     height: 240px;
   }
 }
+
+
+/* =========================================
+   RETROPIXEL™ — SISTEMA GLOBAL DE SUPORTE
+   Compartilhado por todas as páginas
+   Nostal, Pulse, RPM, RetroNet e futuras
+========================================= */
+
+/* CONTAINER PRINCIPAL */
+
+.suporte-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* BANNER DE APRESENTAÇÃO */
+
+.suporte-banner {
+    max-width: 900px;
+    margin: 20px auto 35px;
+    padding: 25px 15px;
+    background: #eaf7ff;
+    border: 4px solid #0077cc;
+    box-shadow: 5px 5px #cccccc;
+}
+
+.suporte-icone {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.suporte-banner h2,
+.suporte-secao h2 {
+    color: #0077cc;
+}
+
+/* SEÇÕES */
+
+.suporte-secao {
+    margin: 40px auto;
+    scroll-margin-top: 20px;
+}
+
+/* CARTÕES DE CONTEÚDO */
+
+.suporte-cartao {
+    max-width: 850px;
+    margin: 25px auto;
+    padding: 20px;
+    text-align: left;
+    background: #ffffff;
+    border: 3px solid #333333;
+    box-shadow: 5px 5px #cccccc;
+}
+
+.suporte-cartao h3 {
+    color: #0077cc;
+}
+
+.suporte-cartao p {
+    font-size: 16px;
+}
+
+/* AVISOS */
+
+.suporte-aviso {
+    max-width: 850px;
+    margin: 25px auto;
+    padding: 15px;
+    background: #fff8d6;
+    border: 3px solid #ffcc00;
+}
+
+.suporte-aviso p {
+    margin-bottom: 0;
+    font-size: 15px;
+}
+
+/* PESQUISA */
+
+.suporte-busca {
+    box-sizing: border-box;
+    width: 90%;
+    max-width: 650px;
+    margin: 15px auto;
+    padding: 12px;
+    font-family: "Courier New", monospace;
+    font-size: 16px;
+    color: #333333;
+    background: #ffffff;
+    border: 3px solid #0077cc;
+}
+
+.suporte-status {
+    min-height: 24px;
+    color: #0077cc;
+    font-weight: bold;
+}
+
+/* PERGUNTAS FREQUENTES */
+
+.suporte-faq {
+    max-width: 850px;
+    margin: 15px auto;
+    text-align: left;
+    background: #ffffff;
+    border: 3px solid #333333;
+    box-shadow: 4px 4px #cccccc;
+}
+
+.suporte-faq summary {
+    padding: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #005599;
+    background: #e8f7ff;
+}
+
+.suporte-faq summary:hover {
+    color: #000000;
+    background: #ffcc00;
+}
+
+.suporte-resposta {
+    padding: 15px;
+    border-top: 2px solid #cccccc;
+}
+
+.suporte-resposta p {
+    font-size: 16px;
+}
+
+.suporte-faq[hidden] {
+    display: none;
+}
+
+/* LISTAS */
+
+.suporte-lista {
+    max-width: 700px;
+    margin: 15px auto;
+    padding-left: 25px;
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* LINKS DE NAVEGAÇÃO INTERNA */
+
+.suporte-atalhos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 25px auto;
+}
+
+/* PESQUISA SEM RESULTADOS */
+
+.suporte-sem-resultados {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 15px;
+    background: #f0f8ff;
+    border: 2px dashed #0077cc;
+}
+
+.suporte-sem-resultados p {
+    font-size: 16px;
+}
+
+/* CARTÃO DE CONTATO */
+
+.suporte-contato {
+    background: #f0fff5;
+    border-color: #00994d;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+    .suporte-container {
+        padding: 10px;
+    }
+
+    .suporte-banner,
+    .suporte-cartao {
+        padding: 15px;
+    }
+
+    .suporte-atalhos {
+        flex-direction: column;
+    }
+
+    .suporte-atalhos a {
+        box-sizing: border-box;
+        width: 90%;
+        max-width: 350px;
+    }
+}
