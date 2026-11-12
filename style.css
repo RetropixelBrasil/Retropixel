@@ -152,9 +152,21 @@ footer a:hover {
 }
 
 .botao-loja {
-  padding: 20px 40px;
-  font-size: 18px;
-  margin: 20px;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   gap: 10px;
+
+   padding: 20px 40px;
+   font-size: 18px;
+   margin: 20px;
+
+   text-align: center;
+}
+
+.botao-loja img {
+   display: block;
+   flex-shrink: 0;
 }
 
 .botao-baixar {
