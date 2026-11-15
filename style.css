@@ -129,6 +129,7 @@ footer a:hover {
   text-decoration: underline;
 }
 
+
 /* =========================
    BOTÕES
 ========================= */
@@ -137,53 +138,78 @@ footer a:hover {
 .botao-loja,
 .botao-email,
 .botao-baixar {
-  background-color: #00aaff;
-  color: #ffffff;
-  font-family: 'Courier New', monospace;
-  padding: 12px 24px;
-  border: 3px solid #0077cc;
-  font-size: 16px;
-  cursor: pointer;
-  box-shadow: 3px 3px #cccccc;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 15px;
-  transition: 0.3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    background-color: #00aaff;
+    color: #ffffff;
+
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+
+    padding: 12px 24px;
+    margin-top: 15px;
+
+    border: 3px solid #0077cc;
+    box-shadow: 3px 3px #cccccc;
+
+    text-decoration: none;
+    text-align: center;
+
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 .botao-loja {
-   display: inline-flex;
-   align-items: center;
-   justify-content: center;
-   gap: 10px;
+    padding: 20px 40px;
+    margin: 20px;
 
-   padding: 20px 40px;
-   font-size: 18px;
-   margin: 20px;
-
-   text-align: center;
+    font-size: 18px;
 }
 
 .botao-loja img {
-   display: block;
-   flex-shrink: 0;
+    display: block;
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.botao-email img {
+    display: block;
+    flex-shrink: 0;
+
+    width: 24px;
+    height: 24px;
+
+    object-fit: contain;
 }
 
 .botao-baixar {
-  background-color: #00cc66;
-  border-color: #00994d;
+    background-color: #00cc66;
+    border-color: #00994d;
 }
 
 .botao-pontobat:hover,
 .botao-loja:hover,
 .botao-email:hover {
-  background-color: #0077cc;
-  border-color: #005599;
+    background-color: #0077cc;
+    border-color: #005599;
 }
 
 .botao-baixar:hover {
-  background-color: #00994d;
-  border-color: #007733;
+    background-color: #00994d;
+    border-color: #007733;
+}
+
+.botao-pontobat:active,
+.botao-loja:active,
+.botao-email:active,
+.botao-baixar:active {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px #cccccc;
 }
 
 /* =========================
